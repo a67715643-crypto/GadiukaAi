@@ -7,21 +7,13 @@ print(colorama.Back.LIGHTWHITE_EX)
 print("""               Привіт!
           Про що поговоримо?""")
 
-input()
-if input() == 'намалюй змію':
-    print("""
-                       _____________________
-                      |  _________________oo|__
-    __________________/ /
-   |___________________/""")
+import cv2
 
-if input() == 'намалюй кота':
-    print("""
-              ||     ||
-             | _| _ |_ |
-            |           |
-            |  O     O  |
-             \    Y    /
-              \ X W X /
-               \_____/
-    """)
+cat_img_path = 'cat-underwater.png'
+
+img = cv2.imread(cat_img_path)
+
+print(cat_img_path)
+
+cv2.imshow('Cat', img)
+cv2.waitKey()
